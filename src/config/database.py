@@ -10,5 +10,6 @@ try:
         print(f'-- DB Not Connected')
     print(f'-- DB Connected Successfully')
     database = client[os.getenv("DATABASE_NAME")]
+    tasks_collection = database['tasks']
 except Exception as e:
     print(f'-- DB Connection Error : {e}')
