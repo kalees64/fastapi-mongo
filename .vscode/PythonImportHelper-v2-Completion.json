@@ -35,24 +35,47 @@
         "documentation": {}
     },
     {
-        "label": "dotenv",
-        "kind": 6,
+        "label": "HTTPBearer",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
         "isExtraImport": true,
-        "importPath": "dotenv",
-        "description": "dotenv",
-        "detail": "dotenv",
+        "detail": "fastapi.security",
         "documentation": {}
     },
     {
-        "label": "MongoClient",
-        "importPath": "pymongo",
-        "description": "pymongo",
+        "label": "HTTPAuthorizationCredentials",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
         "isExtraImport": true,
-        "detail": "pymongo",
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
         "documentation": {}
     },
     {
         "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -76,6 +99,31 @@
         "documentation": {}
     },
     {
+        "label": "dotenv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "starlette",
+        "description": "starlette",
+        "isExtraImport": true,
+        "detail": "starlette",
+        "documentation": {}
+    },
+    {
         "label": "status",
         "importPath": "starlette",
         "description": "starlette",
@@ -92,51 +140,19 @@
         "documentation": {}
     },
     {
-        "label": "CreateTaskRequest",
-        "importPath": "src.task.task_model",
-        "description": "src.task.task_model",
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
         "isExtraImport": true,
-        "detail": "src.task.task_model",
+        "detail": "typing",
         "documentation": {}
     },
     {
-        "label": "TaskResponse",
-        "importPath": "src.task.task_model",
-        "description": "src.task.task_model",
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
         "isExtraImport": true,
-        "detail": "src.task.task_model",
-        "documentation": {}
-    },
-    {
-        "label": "UpdateTaskRequest",
-        "importPath": "src.task.task_model",
-        "description": "src.task.task_model",
-        "isExtraImport": true,
-        "detail": "src.task.task_model",
-        "documentation": {}
-    },
-    {
-        "label": "CreateTaskRequest",
-        "importPath": "src.task.task_model",
-        "description": "src.task.task_model",
-        "isExtraImport": true,
-        "detail": "src.task.task_model",
-        "documentation": {}
-    },
-    {
-        "label": "TaskResponse",
-        "importPath": "src.task.task_model",
-        "description": "src.task.task_model",
-        "isExtraImport": true,
-        "detail": "src.task.task_model",
-        "documentation": {}
-    },
-    {
-        "label": "UpdateTaskRequest",
-        "importPath": "src.task.task_model",
-        "description": "src.task.task_model",
-        "isExtraImport": true,
-        "detail": "src.task.task_model",
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -145,6 +161,70 @@
         "description": "typing",
         "isExtraImport": true,
         "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "verify_bearer_token",
+        "importPath": "src.auth.auth",
+        "description": "src.auth.auth",
+        "isExtraImport": true,
+        "detail": "src.auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "CreateTaskRequest",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "isExtraImport": true,
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "TaskResponse",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "isExtraImport": true,
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateTaskRequest",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "isExtraImport": true,
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "CreateTaskRequest",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "isExtraImport": true,
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "TaskResponse",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "isExtraImport": true,
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateTaskRequest",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "isExtraImport": true,
+        "detail": "src.task.task_model",
         "documentation": {}
     },
     {
@@ -302,11 +382,29 @@
         "documentation": {}
     },
     {
+        "label": "verify_bearer_token",
+        "kind": 2,
+        "importPath": "src.auth.auth",
+        "description": "src.auth.auth",
+        "peekOfCode": "def verify_bearer_token(bearer_token:Annotated[HTTPAuthorizationCredentials,Depends(bearer_auth)]):\n    if bearer_token.scheme == \"Bearer\" and bearer_token.credentials == os.getenv(\"SECRET_ACCESS_KEY\"):\n        return {\"token\":bearer_token.credentials }\n    raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=\"Invalid Bearer Token\")",
+        "detail": "src.auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "bearer_auth",
+        "kind": 5,
+        "importPath": "src.auth.auth",
+        "description": "src.auth.auth",
+        "peekOfCode": "bearer_auth = HTTPBearer()\ndef verify_bearer_token(bearer_token:Annotated[HTTPAuthorizationCredentials,Depends(bearer_auth)]):\n    if bearer_token.scheme == \"Bearer\" and bearer_token.credentials == os.getenv(\"SECRET_ACCESS_KEY\"):\n        return {\"token\":bearer_token.credentials }\n    raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=\"Invalid Bearer Token\")",
+        "detail": "src.auth.auth",
+        "documentation": {}
+    },
+    {
         "label": "get_tasks",
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def get_tasks():\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:UpdateTaskRequest):",
+        "peekOfCode": "def get_tasks(token_auth:guard):\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(token_auth:guard,id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(token_auth:guard,task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(token_auth:guard,id:str,task_data:UpdateTaskRequest):",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -315,7 +413,7 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(id:str):",
+        "peekOfCode": "def get_task(token_auth:guard,id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(token_auth:guard,task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(token_auth:guard,id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(token_auth:guard,id:str):",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -324,7 +422,7 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(id:str):\n    return task_service.delete_task(id)",
+        "peekOfCode": "def create_task(token_auth:guard,task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(token_auth:guard,id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(token_auth:guard,id:str):\n    return task_service.delete_task(id)",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -333,7 +431,7 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def update_task(id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(id:str):\n    return task_service.delete_task(id)",
+        "peekOfCode": "def update_task(token_auth:guard,id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(token_auth:guard,id:str):\n    return task_service.delete_task(id)",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -342,7 +440,7 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def delete_task(id:str):\n    return task_service.delete_task(id)",
+        "peekOfCode": "def delete_task(token_auth:guard,id:str):\n    return task_service.delete_task(id)",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -351,7 +449,16 @@
         "kind": 5,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "task_router = APIRouter(prefix=\"/tasks\",tags=[\"Tasks\"])\n@task_router.get(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_tasks():\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)",
+        "peekOfCode": "task_router = APIRouter(prefix=\"/tasks\",tags=[\"Tasks\"])\nguard = Annotated[dict,Depends(verify_bearer_token)]\n@task_router.get(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_tasks(token_auth:guard):\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(token_auth:guard,id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(token_auth:guard,task_data:CreateTaskRequest):",
+        "detail": "src.task.task_controller",
+        "documentation": {}
+    },
+    {
+        "label": "guard",
+        "kind": 5,
+        "importPath": "src.task.task_controller",
+        "description": "src.task.task_controller",
+        "peekOfCode": "guard = Annotated[dict,Depends(verify_bearer_token)]\n@task_router.get(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_tasks(token_auth:guard):\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(token_auth:guard,id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(token_auth:guard,task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
