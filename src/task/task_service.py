@@ -1,21 +1,33 @@
 from src.config.database import tasks_collection
-from src.task.task_model import CreateTaskRequest,TaskResponse
+from src.task.task_model import CreateTaskRequest, TaskResponse
 from bson import ObjectId
 from fastapi import HTTPException
 from starlette import status
+from typing import Any
 
 
 def get_tasks():
     tasks = list(tasks_collection.find())
-    return {"data":[{**task,"_id":str(task["_id"])} for task in tasks]}
+    # return {"data":[{**task,"id":str(task["_id"])} for task in tasks]}
+    return TaskResponse(data=[{**task,"id":str(task["_id"])} for task in tasks])
 
 def get_task(id:str):
     task = tasks_collection.find_one({"_id":ObjectId(id)})
     if not task:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail="Task not found")
-    return TaskResponse(data={**task,"_id":str(task["_id"])})
+    # return {"data":{**task,"id":str(task["_id"])}}
+    return TaskResponse(data={**task,"id":str(task["_id"])})
 
 def create_task(task_data:CreateTaskRequest):
     new_task = tasks_collection.insert_one(task_data.model_dump())
     created_task = tasks_collection.find_one({"_id":new_task.inserted_id})
-    return {"data":{**created_task,"_id":str(created_task["_id"])}}
+    # return {"data":{**created_task,"id":str(created_task["_id"])}}
+    return TaskResponse(data={**created_task,"id":str(created_task["_id"])})
+
+def update_task(id:str,task_data:dict):
+    if len(task_data.keys()) == 0:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,detail="No data to update")
+    updated_task = tasks_collection.find_one_and_update({"_id":ObjectId(id)},{"$set":task_data},return_document=True)
+    if not updated_task:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail="Task not found")
+    return {"data":{**updated_task,"id":str(updated_task["_id"])}}
