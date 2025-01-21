@@ -13,7 +13,7 @@ def get_tasks():
 def get_task(id:str):
     return task_service.get_task(id)
 
-@task_router.post("",response_model=TaskResponse,status_code=status.HTTP_200_OK)
+@task_router.post("",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)
 def create_task(task_data:CreateTaskRequest):
     return task_service.create_task(task_data)
 

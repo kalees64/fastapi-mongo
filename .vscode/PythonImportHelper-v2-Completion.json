@@ -306,7 +306,7 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def get_tasks():\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:UpdateTaskRequest):",
+        "peekOfCode": "def get_tasks():\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:UpdateTaskRequest):",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -315,7 +315,7 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(id:str):",
+        "peekOfCode": "def get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(id:str):",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -351,7 +351,7 @@
         "kind": 5,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "task_router = APIRouter(prefix=\"/tasks\",tags=[\"Tasks\"])\n@task_router.get(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_tasks():\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)",
+        "peekOfCode": "task_router = APIRouter(prefix=\"/tasks\",tags=[\"Tasks\"])\n@task_router.get(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_tasks():\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
