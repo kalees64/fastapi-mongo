@@ -92,19 +92,51 @@
         "documentation": {}
     },
     {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "CreateTaskRequest",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "src.task.task_model",
         "documentation": {}
     },
     {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "TaskResponse",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateTaskRequest",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "isExtraImport": true,
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "CreateTaskRequest",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "isExtraImport": true,
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "TaskResponse",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "isExtraImport": true,
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateTaskRequest",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "isExtraImport": true,
+        "detail": "src.task.task_model",
         "documentation": {}
     },
     {
@@ -116,79 +148,7 @@
         "documentation": {}
     },
     {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "CreateTaskRequest",
-        "importPath": "src.task.task_model",
-        "description": "src.task.task_model",
-        "isExtraImport": true,
-        "detail": "src.task.task_model",
-        "documentation": {}
-    },
-    {
-        "label": "TaskResponse",
-        "importPath": "src.task.task_model",
-        "description": "src.task.task_model",
-        "isExtraImport": true,
-        "detail": "src.task.task_model",
-        "documentation": {}
-    },
-    {
-        "label": "CreateTaskRequest",
-        "importPath": "src.task.task_model",
-        "description": "src.task.task_model",
-        "isExtraImport": true,
-        "detail": "src.task.task_model",
-        "documentation": {}
-    },
-    {
-        "label": "TaskResponse",
-        "importPath": "src.task.task_model",
-        "description": "src.task.task_model",
-        "isExtraImport": true,
-        "detail": "src.task.task_model",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "timezone",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
         "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "Field",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "ValidationError",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -346,7 +306,7 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def get_tasks():\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:dict):",
+        "peekOfCode": "def get_tasks():\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:UpdateTaskRequest):",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -355,7 +315,7 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:dict):\n    return task_service.update_task(id,task_data)",
+        "peekOfCode": "def get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(id:str):",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -364,7 +324,7 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:dict):\n    return task_service.update_task(id,task_data)",
+        "peekOfCode": "def create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(id:str):\n    return task_service.delete_task(id)",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -373,7 +333,16 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def update_task(id:str,task_data:dict):\n    return task_service.update_task(id,task_data)",
+        "peekOfCode": "def update_task(id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(id:str):\n    return task_service.delete_task(id)",
+        "detail": "src.task.task_controller",
+        "documentation": {}
+    },
+    {
+        "label": "delete_task",
+        "kind": 2,
+        "importPath": "src.task.task_controller",
+        "description": "src.task.task_controller",
+        "peekOfCode": "def delete_task(id:str):\n    return task_service.delete_task(id)",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -391,7 +360,16 @@
         "kind": 6,
         "importPath": "src.task.task_model",
         "description": "src.task.task_model",
-        "peekOfCode": "class CreateTaskRequest(BaseModel):\n    name:str\n    description:Optional[str] = None\nclass TaskResponseModel(BaseModel):\n    id:str\n    name:str\n    description:Optional[str] = None\nclass TaskResponse(BaseModel):\n    data:TaskResponseModel | list[TaskResponseModel]",
+        "peekOfCode": "class CreateTaskRequest(BaseModel):\n    name:str\n    description:Optional[str] = None\nclass UpdateTaskRequest(BaseModel):\n    name:Optional[str] = None\n    description:Optional[str] = None\nclass TaskResponseModel(BaseModel):\n    id:str\n    name:str\n    description:Optional[str] = None",
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateTaskRequest",
+        "kind": 6,
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "peekOfCode": "class UpdateTaskRequest(BaseModel):\n    name:Optional[str] = None\n    description:Optional[str] = None\nclass TaskResponseModel(BaseModel):\n    id:str\n    name:str\n    description:Optional[str] = None\nclass TaskResponse(BaseModel):\n    data:TaskResponseModel | list[TaskResponseModel]",
         "detail": "src.task.task_model",
         "documentation": {}
     },
@@ -436,7 +414,7 @@
         "kind": 2,
         "importPath": "src.task.task_service",
         "description": "src.task.task_service",
-        "peekOfCode": "def create_task(task_data:CreateTaskRequest):\n    new_task = tasks_collection.insert_one(task_data.model_dump())\n    created_task = tasks_collection.find_one({\"_id\":new_task.inserted_id})\n    # return {\"data\":{**created_task,\"id\":str(created_task[\"_id\"])}}\n    return TaskResponse(data={**created_task,\"id\":str(created_task[\"_id\"])})\ndef update_task(id:str,task_data:dict):\n    if len(task_data.keys()) == 0:\n        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,detail=\"No data to update\")\n    updated_task = tasks_collection.find_one_and_update({\"_id\":ObjectId(id)},{\"$set\":task_data},return_document=True)\n    if not updated_task:",
+        "peekOfCode": "def create_task(task_data:CreateTaskRequest):\n    new_task = tasks_collection.insert_one(task_data.model_dump())\n    created_task = tasks_collection.find_one({\"_id\":new_task.inserted_id})\n    # return {\"data\":{**created_task,\"id\":str(created_task[\"_id\"])}}\n    return TaskResponse(data={**created_task,\"id\":str(created_task[\"_id\"])})\ndef update_task(id:str,task_data:UpdateTaskRequest):\n    update_task_data = task_data.model_dump(exclude_unset=True)\n    if len(update_task_data.keys()) == 0:\n        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,detail=\"No valid data to update\")\n    updated_task = tasks_collection.find_one_and_update({\"_id\":ObjectId(id)},{\"$set\":update_task_data},return_document=True)",
         "detail": "src.task.task_service",
         "documentation": {}
     },
@@ -445,7 +423,16 @@
         "kind": 2,
         "importPath": "src.task.task_service",
         "description": "src.task.task_service",
-        "peekOfCode": "def update_task(id:str,task_data:dict):\n    if len(task_data.keys()) == 0:\n        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,detail=\"No data to update\")\n    updated_task = tasks_collection.find_one_and_update({\"_id\":ObjectId(id)},{\"$set\":task_data},return_document=True)\n    if not updated_task:\n        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail=\"Task not found\")\n    return {\"data\":{**updated_task,\"id\":str(updated_task[\"_id\"])}}",
+        "peekOfCode": "def update_task(id:str,task_data:UpdateTaskRequest):\n    update_task_data = task_data.model_dump(exclude_unset=True)\n    if len(update_task_data.keys()) == 0:\n        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,detail=\"No valid data to update\")\n    updated_task = tasks_collection.find_one_and_update({\"_id\":ObjectId(id)},{\"$set\":update_task_data},return_document=True)\n    if not updated_task:\n        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail=\"Task not found\")\n    # return {\"data\":{**updated_task,\"id\":str(updated_task[\"_id\"])}}\n    return TaskResponse(data={**updated_task,\"id\":str(updated_task[\"_id\"])})\ndef delete_task(id:str):",
+        "detail": "src.task.task_service",
+        "documentation": {}
+    },
+    {
+        "label": "delete_task",
+        "kind": 2,
+        "importPath": "src.task.task_service",
+        "description": "src.task.task_service",
+        "peekOfCode": "def delete_task(id:str):\n    deleted_task = tasks_collection.find_one_and_delete({\"_id\":ObjectId(id)})\n    if not delete_task:\n        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail=\"Task not found\")\n    # return {\"data\":{**deleted_task,\"id\":str(deleted_task[\"_id\"])}}\n    return TaskResponse(data={**deleted_task,\"id\":str(deleted_task[\"_id\"])})",
         "detail": "src.task.task_service",
         "documentation": {}
     },
