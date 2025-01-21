@@ -3,6 +3,7 @@ import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
 from pathlib import Path
+from src.config import database
 
 app = FastAPI(title="FastAPI + MongoDB",version="0.0.1")
 
@@ -11,6 +12,7 @@ class Response(BaseModel):
 
 @app.get("/",tags=["Default"])
 def root():
+    print(f'-- DB Name : {database}')
     return Response(data="API is running")
 
 if __name__ == "__main__":

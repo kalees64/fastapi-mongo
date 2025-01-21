@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e98c6a46-a271-45f5-bc2b-7657d83db060" name="Changes" comment="" />
+    <list default="true" id="e98c6a46-a271-45f5-bc2b-7657d83db060" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/config/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,5 +81,8 @@
       <updated>1737423640114</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
 </project>
