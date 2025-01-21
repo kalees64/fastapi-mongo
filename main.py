@@ -7,11 +7,13 @@ from pydantic import BaseModel
 from pathlib import Path
 from src.config import database
 from src.task.task_controller import task_router
+from src.auth.auth_controller import auth_router
 
 dotenv.load_dotenv()
 
 app = FastAPI(title="FastAPI + MongoDB",version="0.0.1")
 app.include_router(task_router)
+app.include_router(auth_router)
 
 class Response(BaseModel):
     data:str

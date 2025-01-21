@@ -35,19 +35,11 @@
         "documentation": {}
     },
     {
-        "label": "HTTPBearer",
-        "importPath": "fastapi.security",
-        "description": "fastapi.security",
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
         "isExtraImport": true,
-        "detail": "fastapi.security",
-        "documentation": {}
-    },
-    {
-        "label": "HTTPAuthorizationCredentials",
-        "importPath": "fastapi.security",
-        "description": "fastapi.security",
-        "isExtraImport": true,
-        "detail": "fastapi.security",
+        "detail": "fastapi",
         "documentation": {}
     },
     {
@@ -99,6 +91,54 @@
         "documentation": {}
     },
     {
+        "label": "AuthResponse",
+        "importPath": "src.auth.auth_model",
+        "description": "src.auth.auth_model",
+        "isExtraImport": true,
+        "detail": "src.auth.auth_model",
+        "documentation": {}
+    },
+    {
+        "label": "LoginUserModel",
+        "importPath": "src.auth.auth_model",
+        "description": "src.auth.auth_model",
+        "isExtraImport": true,
+        "detail": "src.auth.auth_model",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "starlette",
+        "description": "starlette",
+        "isExtraImport": true,
+        "detail": "starlette",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "starlette",
+        "description": "starlette",
+        "isExtraImport": true,
+        "detail": "starlette",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "starlette",
+        "description": "starlette",
+        "isExtraImport": true,
+        "detail": "starlette",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "starlette",
+        "description": "starlette",
+        "isExtraImport": true,
+        "detail": "starlette",
+        "documentation": {}
+    },
+    {
         "label": "dotenv",
         "kind": 6,
         "isExtraImport": true,
@@ -116,27 +156,59 @@
         "documentation": {}
     },
     {
-        "label": "status",
-        "importPath": "starlette",
-        "description": "starlette",
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
         "isExtraImport": true,
-        "detail": "starlette",
+        "detail": "dotenv",
         "documentation": {}
     },
     {
-        "label": "status",
-        "importPath": "starlette",
-        "description": "starlette",
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
         "isExtraImport": true,
-        "detail": "starlette",
+        "detail": "pydantic",
         "documentation": {}
     },
     {
-        "label": "status",
-        "importPath": "starlette",
-        "description": "starlette",
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
         "isExtraImport": true,
-        "detail": "starlette",
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPBearer",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPAuthorizationCredentials",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
         "documentation": {}
     },
     {
@@ -173,10 +245,10 @@
     },
     {
         "label": "verify_bearer_token",
-        "importPath": "src.auth.auth",
-        "description": "src.auth.auth",
+        "importPath": "src.auth.auth_service",
+        "description": "src.auth.auth_service",
         "isExtraImport": true,
-        "detail": "src.auth.auth",
+        "detail": "src.auth.auth_service",
         "documentation": {}
     },
     {
@@ -225,22 +297,6 @@
         "description": "src.task.task_model",
         "isExtraImport": true,
         "detail": "src.task.task_model",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
         "documentation": {}
     },
     {
@@ -298,6 +354,14 @@
         "description": "src.task.task_controller",
         "isExtraImport": true,
         "detail": "src.task.task_controller",
+        "documentation": {}
+    },
+    {
+        "label": "auth_router",
+        "importPath": "src.auth.auth_controller",
+        "description": "src.auth.auth_controller",
+        "isExtraImport": true,
+        "detail": "src.auth.auth_controller",
         "documentation": {}
     },
     {
@@ -382,21 +446,75 @@
         "documentation": {}
     },
     {
+        "label": "login",
+        "kind": 2,
+        "importPath": "src.auth.auth_controller",
+        "description": "src.auth.auth_controller",
+        "peekOfCode": "def login(user_data:LoginUserModel):\n    user = user_data.model_dump()\n    return AuthResponse(access_token=os.getenv(\"SECRET_ACCESS_KEY\"),token_type=\"Bearer\",user=user[\"email\"])",
+        "detail": "src.auth.auth_controller",
+        "documentation": {}
+    },
+    {
+        "label": "auth_router",
+        "kind": 5,
+        "importPath": "src.auth.auth_controller",
+        "description": "src.auth.auth_controller",
+        "peekOfCode": "auth_router = APIRouter(prefix=\"/auth\",tags=[\"Auth\"])\n@auth_router.post(\"/login\",response_model=AuthResponse,status_code=status.HTTP_200_OK)\ndef login(user_data:LoginUserModel):\n    user = user_data.model_dump()\n    return AuthResponse(access_token=os.getenv(\"SECRET_ACCESS_KEY\"),token_type=\"Bearer\",user=user[\"email\"])",
+        "detail": "src.auth.auth_controller",
+        "documentation": {}
+    },
+    {
+        "label": "LoginUserModel",
+        "kind": 6,
+        "importPath": "src.auth.auth_model",
+        "description": "src.auth.auth_model",
+        "peekOfCode": "class LoginUserModel(BaseModel):\n    email:EmailStr\n    password:str\nclass AuthResponse(BaseModel):\n    access_token:str\n    token_type:str = \"JWT / Bearer\"\n    user:EmailStr",
+        "detail": "src.auth.auth_model",
+        "documentation": {}
+    },
+    {
+        "label": "AuthResponse",
+        "kind": 6,
+        "importPath": "src.auth.auth_model",
+        "description": "src.auth.auth_model",
+        "peekOfCode": "class AuthResponse(BaseModel):\n    access_token:str\n    token_type:str = \"JWT / Bearer\"\n    user:EmailStr",
+        "detail": "src.auth.auth_model",
+        "documentation": {}
+    },
+    {
         "label": "verify_bearer_token",
         "kind": 2,
-        "importPath": "src.auth.auth",
-        "description": "src.auth.auth",
-        "peekOfCode": "def verify_bearer_token(bearer_token:Annotated[HTTPAuthorizationCredentials,Depends(bearer_auth)]):\n    if bearer_token.scheme == \"Bearer\" and bearer_token.credentials == os.getenv(\"SECRET_ACCESS_KEY\"):\n        return {\"token\":bearer_token.credentials }\n    raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=\"Invalid Bearer Token\")",
-        "detail": "src.auth.auth",
+        "importPath": "src.auth.auth_service",
+        "description": "src.auth.auth_service",
+        "peekOfCode": "def verify_bearer_token(bearer_token:Annotated[HTTPAuthorizationCredentials,Depends(bearer_auth)]):\n    if bearer_token.scheme == \"Bearer\" and bearer_token.credentials == os.getenv(\"SECRET_ACCESS_KEY\"):\n        return {\"token\":bearer_token.credentials }\n    raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=\"Invalid Bearer Token\")\ndef create_jwt_token():\n    pass\ndef verify_jwt_token():\n    pass",
+        "detail": "src.auth.auth_service",
+        "documentation": {}
+    },
+    {
+        "label": "create_jwt_token",
+        "kind": 2,
+        "importPath": "src.auth.auth_service",
+        "description": "src.auth.auth_service",
+        "peekOfCode": "def create_jwt_token():\n    pass\ndef verify_jwt_token():\n    pass",
+        "detail": "src.auth.auth_service",
+        "documentation": {}
+    },
+    {
+        "label": "verify_jwt_token",
+        "kind": 2,
+        "importPath": "src.auth.auth_service",
+        "description": "src.auth.auth_service",
+        "peekOfCode": "def verify_jwt_token():\n    pass",
+        "detail": "src.auth.auth_service",
         "documentation": {}
     },
     {
         "label": "bearer_auth",
         "kind": 5,
-        "importPath": "src.auth.auth",
-        "description": "src.auth.auth",
-        "peekOfCode": "bearer_auth = HTTPBearer()\ndef verify_bearer_token(bearer_token:Annotated[HTTPAuthorizationCredentials,Depends(bearer_auth)]):\n    if bearer_token.scheme == \"Bearer\" and bearer_token.credentials == os.getenv(\"SECRET_ACCESS_KEY\"):\n        return {\"token\":bearer_token.credentials }\n    raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=\"Invalid Bearer Token\")",
-        "detail": "src.auth.auth",
+        "importPath": "src.auth.auth_service",
+        "description": "src.auth.auth_service",
+        "peekOfCode": "bearer_auth = HTTPBearer()\ndef verify_bearer_token(bearer_token:Annotated[HTTPAuthorizationCredentials,Depends(bearer_auth)]):\n    if bearer_token.scheme == \"Bearer\" and bearer_token.credentials == os.getenv(\"SECRET_ACCESS_KEY\"):\n        return {\"token\":bearer_token.credentials }\n    raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=\"Invalid Bearer Token\")\ndef create_jwt_token():\n    pass\ndef verify_jwt_token():\n    pass",
+        "detail": "src.auth.auth_service",
         "documentation": {}
     },
     {
@@ -404,7 +522,7 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def get_tasks(token_auth:guard):\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(token_auth:guard,id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(token_auth:guard,task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(token_auth:guard,id:str,task_data:UpdateTaskRequest):",
+        "peekOfCode": "def get_tasks():\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:UpdateTaskRequest):",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -413,7 +531,7 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def get_task(token_auth:guard,id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(token_auth:guard,task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(token_auth:guard,id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(token_auth:guard,id:str):",
+        "peekOfCode": "def get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(id:str):",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -422,7 +540,7 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def create_task(token_auth:guard,task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(token_auth:guard,id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(token_auth:guard,id:str):\n    return task_service.delete_task(id)",
+        "peekOfCode": "def create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)\n@task_router.patch(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef update_task(id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(id:str):\n    return task_service.delete_task(id)",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -431,7 +549,7 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def update_task(token_auth:guard,id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(token_auth:guard,id:str):\n    return task_service.delete_task(id)",
+        "peekOfCode": "def update_task(id:str,task_data:UpdateTaskRequest):\n    return task_service.update_task(id,task_data)\n@task_router.delete(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef delete_task(id:str):\n    return task_service.delete_task(id)",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -440,7 +558,7 @@
         "kind": 2,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "def delete_task(token_auth:guard,id:str):\n    return task_service.delete_task(id)",
+        "peekOfCode": "def delete_task(id:str):\n    return task_service.delete_task(id)",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -449,16 +567,7 @@
         "kind": 5,
         "importPath": "src.task.task_controller",
         "description": "src.task.task_controller",
-        "peekOfCode": "task_router = APIRouter(prefix=\"/tasks\",tags=[\"Tasks\"])\nguard = Annotated[dict,Depends(verify_bearer_token)]\n@task_router.get(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_tasks(token_auth:guard):\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(token_auth:guard,id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(token_auth:guard,task_data:CreateTaskRequest):",
-        "detail": "src.task.task_controller",
-        "documentation": {}
-    },
-    {
-        "label": "guard",
-        "kind": 5,
-        "importPath": "src.task.task_controller",
-        "description": "src.task.task_controller",
-        "peekOfCode": "guard = Annotated[dict,Depends(verify_bearer_token)]\n@task_router.get(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_tasks(token_auth:guard):\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(token_auth:guard,id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(token_auth:guard,task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)",
+        "peekOfCode": "task_router = APIRouter(prefix=\"/tasks\",tags=[\"Tasks\"],dependencies=[Depends(verify_bearer_token)])\n# guard = Annotated[dict,Depends(verify_bearer_token)]\n@task_router.get(\"\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_tasks():\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\",response_model=TaskResponse,status_code=status.HTTP_200_OK)\ndef get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"\",response_model=TaskResponse,status_code=status.HTTP_201_CREATED)\ndef create_task(task_data:CreateTaskRequest):",
         "detail": "src.task.task_controller",
         "documentation": {}
     },
@@ -566,7 +675,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI(title=\"FastAPI + MongoDB\",version=\"0.0.1\")\napp.include_router(task_router)\nclass Response(BaseModel):\n    data:str\n@app.get(\"/\",tags=[\"Default\"],response_model=Response)\ndef root():\n    print(f'-- DB Name : {database}')\n    return Response(data=\"API is running\")\n# if __name__ == \"__main__\":\n#     # uvicorn.run(\"main:app\", host=\"127.0.0.1\", port=3000, reload=True)",
+        "peekOfCode": "app = FastAPI(title=\"FastAPI + MongoDB\",version=\"0.0.1\")\napp.include_router(task_router)\napp.include_router(auth_router)\nclass Response(BaseModel):\n    data:str\n@app.get(\"/\",tags=[\"Default\"],response_model=Response)\ndef root():\n    print(f'-- DB Name : {database}')\n    return Response(data=\"API is running\")\n# if __name__ == \"__main__\":",
         "detail": "main",
         "documentation": {}
     }

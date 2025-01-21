@@ -14,3 +14,9 @@ def verify_bearer_token(bearer_token:Annotated[HTTPAuthorizationCredentials,Depe
     if bearer_token.scheme == "Bearer" and bearer_token.credentials == os.getenv("SECRET_ACCESS_KEY"):
         return {"token":bearer_token.credentials }
     raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail="Invalid Bearer Token")
+
+def create_jwt_token():
+    pass
+
+def verify_jwt_token():
+    pass
