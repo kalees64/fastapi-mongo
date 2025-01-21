@@ -1,0 +1,428 @@
+[
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "dotenv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "TaskResponse",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "isExtraImport": true,
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "CreateTaskRequest",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "isExtraImport": true,
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "CreateTaskRequest",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "isExtraImport": true,
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "TaskResponse",
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "isExtraImport": true,
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "tasks_collection",
+        "importPath": "src.config.database",
+        "description": "src.config.database",
+        "isExtraImport": true,
+        "detail": "src.config.database",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "starlette",
+        "description": "starlette",
+        "isExtraImport": true,
+        "detail": "starlette",
+        "documentation": {}
+    },
+    {
+        "label": "dev",
+        "importPath": "fastapi_cli.cli",
+        "description": "fastapi_cli.cli",
+        "isExtraImport": true,
+        "detail": "fastapi_cli.cli",
+        "documentation": {}
+    },
+    {
+        "label": "uvicorn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uvicorn",
+        "description": "uvicorn",
+        "detail": "uvicorn",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "database",
+        "importPath": "src.config",
+        "description": "src.config",
+        "isExtraImport": true,
+        "detail": "src.config",
+        "documentation": {}
+    },
+    {
+        "label": "task_router",
+        "importPath": "src.task.task_controller",
+        "description": "src.task.task_controller",
+        "isExtraImport": true,
+        "detail": "src.task.task_controller",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "get_tasks",
+        "kind": 2,
+        "importPath": "src.task.task_controller",
+        "description": "src.task.task_controller",
+        "peekOfCode": "def get_tasks():\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\")\ndef get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"/\",response_model=TaskResponse)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)",
+        "detail": "src.task.task_controller",
+        "documentation": {}
+    },
+    {
+        "label": "get_task",
+        "kind": 2,
+        "importPath": "src.task.task_controller",
+        "description": "src.task.task_controller",
+        "peekOfCode": "def get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"/\",response_model=TaskResponse)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)",
+        "detail": "src.task.task_controller",
+        "documentation": {}
+    },
+    {
+        "label": "create_task",
+        "kind": 2,
+        "importPath": "src.task.task_controller",
+        "description": "src.task.task_controller",
+        "peekOfCode": "def create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)",
+        "detail": "src.task.task_controller",
+        "documentation": {}
+    },
+    {
+        "label": "task_router",
+        "kind": 5,
+        "importPath": "src.task.task_controller",
+        "description": "src.task.task_controller",
+        "peekOfCode": "task_router = APIRouter(prefix=\"/tasks\",tags=[\"Tasks\"])\n@task_router.get(\"/\",response_model=TaskResponse)\ndef get_tasks():\n    return task_service.get_tasks()\n@task_router.get(\"/{id}\")\ndef get_task(id:str):\n    return task_service.get_task(id)\n@task_router.post(\"/\",response_model=TaskResponse)\ndef create_task(task_data:CreateTaskRequest):\n    return task_service.create_task(task_data)",
+        "detail": "src.task.task_controller",
+        "documentation": {}
+    },
+    {
+        "label": "TaskResponse",
+        "kind": 6,
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "peekOfCode": "class TaskResponse(BaseModel):\n    data:Any\nclass CreateTaskRequest(BaseModel):\n    name:str\n    description:Optional[str] = None",
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "CreateTaskRequest",
+        "kind": 6,
+        "importPath": "src.task.task_model",
+        "description": "src.task.task_model",
+        "peekOfCode": "class CreateTaskRequest(BaseModel):\n    name:str\n    description:Optional[str] = None",
+        "detail": "src.task.task_model",
+        "documentation": {}
+    },
+    {
+        "label": "get_tasks",
+        "kind": 2,
+        "importPath": "src.task.task_service",
+        "description": "src.task.task_service",
+        "peekOfCode": "def get_tasks():\n    tasks = list(tasks_collection.find())\n    return {\"data\":[{**task,\"_id\":str(task[\"_id\"])} for task in tasks]}\ndef get_task(id:str):\n    task = tasks_collection.find_one({\"_id\":ObjectId(id)})\n    if not task:\n        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail=\"Task not found\")\n    return TaskResponse(data={**task,\"_id\":str(task[\"_id\"])})\ndef create_task(task_data:CreateTaskRequest):\n    new_task = tasks_collection.insert_one(task_data.model_dump())",
+        "detail": "src.task.task_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_task",
+        "kind": 2,
+        "importPath": "src.task.task_service",
+        "description": "src.task.task_service",
+        "peekOfCode": "def get_task(id:str):\n    task = tasks_collection.find_one({\"_id\":ObjectId(id)})\n    if not task:\n        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail=\"Task not found\")\n    return TaskResponse(data={**task,\"_id\":str(task[\"_id\"])})\ndef create_task(task_data:CreateTaskRequest):\n    new_task = tasks_collection.insert_one(task_data.model_dump())\n    created_task = tasks_collection.find_one({\"_id\":new_task.inserted_id})\n    return {\"data\":{**created_task,\"_id\":str(created_task[\"_id\"])}}",
+        "detail": "src.task.task_service",
+        "documentation": {}
+    },
+    {
+        "label": "create_task",
+        "kind": 2,
+        "importPath": "src.task.task_service",
+        "description": "src.task.task_service",
+        "peekOfCode": "def create_task(task_data:CreateTaskRequest):\n    new_task = tasks_collection.insert_one(task_data.model_dump())\n    created_task = tasks_collection.find_one({\"_id\":new_task.inserted_id})\n    return {\"data\":{**created_task,\"_id\":str(created_task[\"_id\"])}}",
+        "detail": "src.task.task_service",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Response(BaseModel):\n    data:str\n@app.get(\"/\",tags=[\"Default\"],response_model=Response)\ndef root():\n    print(f'-- DB Name : {database}')\n    return Response(data=\"API is running\")\n# if __name__ == \"__main__\":\n#     # uvicorn.run(\"main:app\", host=\"127.0.0.1\", port=3000, reload=True)\n#     dev(port=3000,host=\"127.0.0.1\",reload=True,path=Path(\"main.py\"))",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def root():\n    print(f'-- DB Name : {database}')\n    return Response(data=\"API is running\")\n# if __name__ == \"__main__\":\n#     # uvicorn.run(\"main:app\", host=\"127.0.0.1\", port=3000, reload=True)\n#     dev(port=3000,host=\"127.0.0.1\",reload=True,path=Path(\"main.py\"))",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI(title=\"FastAPI + MongoDB\",version=\"0.0.1\")\napp.include_router(task_router)\nclass Response(BaseModel):\n    data:str\n@app.get(\"/\",tags=[\"Default\"],response_model=Response)\ndef root():\n    print(f'-- DB Name : {database}')\n    return Response(data=\"API is running\")\n# if __name__ == \"__main__\":\n#     # uvicorn.run(\"main:app\", host=\"127.0.0.1\", port=3000, reload=True)",
+        "detail": "main",
+        "documentation": {}
+    }
+]
