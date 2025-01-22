@@ -21,7 +21,7 @@ def verify_bearer_token(bearer_token:Annotated[HTTPAuthorizationCredentials,Depe
 
 def create_jwt_token(user:EmailStr,expires_delta:timedelta):
     expires = datetime.now()+expires_delta
-    encode = {'sub':user,"exp":expires}
+    encode = {'sub':user,"exp":expires.timestamp()}
     return jwt.encode(encode,os.getenv("SECRET_ACCESS_KEY"),jwt_algorithm)
 
 def verify_jwt_token(bearer_jwt_token:Annotated[str,Depends(bearer_auth)]):

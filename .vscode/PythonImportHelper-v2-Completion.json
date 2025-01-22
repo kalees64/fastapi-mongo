@@ -514,7 +514,7 @@
         "kind": 2,
         "importPath": "src.auth.auth_controller",
         "description": "src.auth.auth_controller",
-        "peekOfCode": "def login(user_data:LoginUserModel):\n    user = user_data.model_dump()\n    jwt_token = create_jwt_token(user[\"email\"],timedelta(minutes=10))\n    # return AuthResponse(access_token=os.getenv(\"SECRET_ACCESS_KEY\"),token_type=\"Bearer\",user=user[\"email\"])\n    return AuthResponse(access_token=jwt_token,token_type=\"JWT\",user=user[\"email\"])",
+        "peekOfCode": "def login(user_data:LoginUserModel):\n    user = user_data.model_dump()\n    jwt_token = create_jwt_token(user[\"email\"],timedelta(hours=3))\n    # return AuthResponse(access_token=os.getenv(\"SECRET_ACCESS_KEY\"),token_type=\"Bearer\",user=user[\"email\"])\n    return AuthResponse(access_token=jwt_token,token_type=\"JWT\",user=user[\"email\"])",
         "detail": "src.auth.auth_controller",
         "documentation": {}
     },
@@ -523,7 +523,7 @@
         "kind": 5,
         "importPath": "src.auth.auth_controller",
         "description": "src.auth.auth_controller",
-        "peekOfCode": "auth_router = APIRouter(prefix=\"/auth\",tags=[\"Auth\"])\n@auth_router.post(\"/login\",response_model=AuthResponse,status_code=status.HTTP_200_OK)\ndef login(user_data:LoginUserModel):\n    user = user_data.model_dump()\n    jwt_token = create_jwt_token(user[\"email\"],timedelta(minutes=10))\n    # return AuthResponse(access_token=os.getenv(\"SECRET_ACCESS_KEY\"),token_type=\"Bearer\",user=user[\"email\"])\n    return AuthResponse(access_token=jwt_token,token_type=\"JWT\",user=user[\"email\"])",
+        "peekOfCode": "auth_router = APIRouter(prefix=\"/auth\",tags=[\"Auth\"])\n@auth_router.post(\"/login\",response_model=AuthResponse,status_code=status.HTTP_200_OK)\ndef login(user_data:LoginUserModel):\n    user = user_data.model_dump()\n    jwt_token = create_jwt_token(user[\"email\"],timedelta(hours=3))\n    # return AuthResponse(access_token=os.getenv(\"SECRET_ACCESS_KEY\"),token_type=\"Bearer\",user=user[\"email\"])\n    return AuthResponse(access_token=jwt_token,token_type=\"JWT\",user=user[\"email\"])",
         "detail": "src.auth.auth_controller",
         "documentation": {}
     },
@@ -550,7 +550,7 @@
         "kind": 2,
         "importPath": "src.auth.auth_service",
         "description": "src.auth.auth_service",
-        "peekOfCode": "def verify_bearer_token(bearer_token:Annotated[HTTPAuthorizationCredentials,Depends(bearer_auth)]):\n    if bearer_token.scheme == \"Bearer\" and bearer_token.credentials == os.getenv(\"SECRET_ACCESS_KEY\"):\n        return {\"token\":bearer_token.credentials }\n    raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=\"Invalid Bearer Token\")\ndef create_jwt_token(user:EmailStr,expires_delta:timedelta):\n    expires = datetime.now()+expires_delta\n    encode = {'sub':user,\"exp\":expires}\n    return jwt.encode(encode,os.getenv(\"SECRET_ACCESS_KEY\"),jwt_algorithm)\ndef verify_jwt_token(bearer_jwt_token:Annotated[str,Depends(bearer_auth)]):\n    try:",
+        "peekOfCode": "def verify_bearer_token(bearer_token:Annotated[HTTPAuthorizationCredentials,Depends(bearer_auth)]):\n    if bearer_token.scheme == \"Bearer\" and bearer_token.credentials == os.getenv(\"SECRET_ACCESS_KEY\"):\n        return {\"token\":bearer_token.credentials }\n    raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=\"Invalid Bearer Token\")\ndef create_jwt_token(user:EmailStr,expires_delta:timedelta):\n    expires = datetime.now()+expires_delta\n    encode = {'sub':user,\"exp\":expires.timestamp()}\n    return jwt.encode(encode,os.getenv(\"SECRET_ACCESS_KEY\"),jwt_algorithm)\ndef verify_jwt_token(bearer_jwt_token:Annotated[str,Depends(bearer_auth)]):\n    try:",
         "detail": "src.auth.auth_service",
         "documentation": {}
     },
@@ -559,7 +559,7 @@
         "kind": 2,
         "importPath": "src.auth.auth_service",
         "description": "src.auth.auth_service",
-        "peekOfCode": "def create_jwt_token(user:EmailStr,expires_delta:timedelta):\n    expires = datetime.now()+expires_delta\n    encode = {'sub':user,\"exp\":expires}\n    return jwt.encode(encode,os.getenv(\"SECRET_ACCESS_KEY\"),jwt_algorithm)\ndef verify_jwt_token(bearer_jwt_token:Annotated[str,Depends(bearer_auth)]):\n    try:\n        if not bearer_jwt_token.scheme == \"Bearer\" or not bearer_jwt_token.credentials:\n            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=\"Invalid Bearer Token\")\n        jwt_token = bearer_jwt_token.credentials\n        payload = jwt.decode(jwt_token,os.getenv(\"SECRET_ACCESS_KEY\"),algorithms=[jwt_algorithm])",
+        "peekOfCode": "def create_jwt_token(user:EmailStr,expires_delta:timedelta):\n    expires = datetime.now()+expires_delta\n    encode = {'sub':user,\"exp\":expires.timestamp()}\n    return jwt.encode(encode,os.getenv(\"SECRET_ACCESS_KEY\"),jwt_algorithm)\ndef verify_jwt_token(bearer_jwt_token:Annotated[str,Depends(bearer_auth)]):\n    try:\n        if not bearer_jwt_token.scheme == \"Bearer\" or not bearer_jwt_token.credentials:\n            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=\"Invalid Bearer Token\")\n        jwt_token = bearer_jwt_token.credentials\n        payload = jwt.decode(jwt_token,os.getenv(\"SECRET_ACCESS_KEY\"),algorithms=[jwt_algorithm])",
         "detail": "src.auth.auth_service",
         "documentation": {}
     },
@@ -577,7 +577,7 @@
         "kind": 5,
         "importPath": "src.auth.auth_service",
         "description": "src.auth.auth_service",
-        "peekOfCode": "bearer_auth = HTTPBearer()\njwt_algorithm = \"HS256\"\ndef verify_bearer_token(bearer_token:Annotated[HTTPAuthorizationCredentials,Depends(bearer_auth)]):\n    if bearer_token.scheme == \"Bearer\" and bearer_token.credentials == os.getenv(\"SECRET_ACCESS_KEY\"):\n        return {\"token\":bearer_token.credentials }\n    raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=\"Invalid Bearer Token\")\ndef create_jwt_token(user:EmailStr,expires_delta:timedelta):\n    expires = datetime.now()+expires_delta\n    encode = {'sub':user,\"exp\":expires}\n    return jwt.encode(encode,os.getenv(\"SECRET_ACCESS_KEY\"),jwt_algorithm)",
+        "peekOfCode": "bearer_auth = HTTPBearer()\njwt_algorithm = \"HS256\"\ndef verify_bearer_token(bearer_token:Annotated[HTTPAuthorizationCredentials,Depends(bearer_auth)]):\n    if bearer_token.scheme == \"Bearer\" and bearer_token.credentials == os.getenv(\"SECRET_ACCESS_KEY\"):\n        return {\"token\":bearer_token.credentials }\n    raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=\"Invalid Bearer Token\")\ndef create_jwt_token(user:EmailStr,expires_delta:timedelta):\n    expires = datetime.now()+expires_delta\n    encode = {'sub':user,\"exp\":expires.timestamp()}\n    return jwt.encode(encode,os.getenv(\"SECRET_ACCESS_KEY\"),jwt_algorithm)",
         "detail": "src.auth.auth_service",
         "documentation": {}
     },
@@ -586,7 +586,7 @@
         "kind": 5,
         "importPath": "src.auth.auth_service",
         "description": "src.auth.auth_service",
-        "peekOfCode": "jwt_algorithm = \"HS256\"\ndef verify_bearer_token(bearer_token:Annotated[HTTPAuthorizationCredentials,Depends(bearer_auth)]):\n    if bearer_token.scheme == \"Bearer\" and bearer_token.credentials == os.getenv(\"SECRET_ACCESS_KEY\"):\n        return {\"token\":bearer_token.credentials }\n    raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=\"Invalid Bearer Token\")\ndef create_jwt_token(user:EmailStr,expires_delta:timedelta):\n    expires = datetime.now()+expires_delta\n    encode = {'sub':user,\"exp\":expires}\n    return jwt.encode(encode,os.getenv(\"SECRET_ACCESS_KEY\"),jwt_algorithm)\ndef verify_jwt_token(bearer_jwt_token:Annotated[str,Depends(bearer_auth)]):",
+        "peekOfCode": "jwt_algorithm = \"HS256\"\ndef verify_bearer_token(bearer_token:Annotated[HTTPAuthorizationCredentials,Depends(bearer_auth)]):\n    if bearer_token.scheme == \"Bearer\" and bearer_token.credentials == os.getenv(\"SECRET_ACCESS_KEY\"):\n        return {\"token\":bearer_token.credentials }\n    raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=\"Invalid Bearer Token\")\ndef create_jwt_token(user:EmailStr,expires_delta:timedelta):\n    expires = datetime.now()+expires_delta\n    encode = {'sub':user,\"exp\":expires.timestamp()}\n    return jwt.encode(encode,os.getenv(\"SECRET_ACCESS_KEY\"),jwt_algorithm)\ndef verify_jwt_token(bearer_jwt_token:Annotated[str,Depends(bearer_auth)]):",
         "detail": "src.auth.auth_service",
         "documentation": {}
     },

@@ -13,6 +13,6 @@ auth_router = APIRouter(prefix="/auth",tags=["Auth"])
 @auth_router.post("/login",response_model=AuthResponse,status_code=status.HTTP_200_OK)
 def login(user_data:LoginUserModel):
     user = user_data.model_dump()
-    jwt_token = create_jwt_token(user["email"],timedelta(minutes=10))
+    jwt_token = create_jwt_token(user["email"],timedelta(hours=3))
     # return AuthResponse(access_token=os.getenv("SECRET_ACCESS_KEY"),token_type="Bearer",user=user["email"])
     return AuthResponse(access_token=jwt_token,token_type="JWT",user=user["email"])
