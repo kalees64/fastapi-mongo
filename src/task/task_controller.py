@@ -1,11 +1,11 @@
 from fastapi import APIRouter,Depends
 from starlette import status
-from src.auth.auth_service import verify_bearer_token
+from src.auth.auth_service import verify_bearer_token, verify_jwt_token
 from . import task_service
 from src.task.task_model import CreateTaskRequest, TaskResponse, UpdateTaskRequest
 from typing import Annotated
 
-task_router = APIRouter(prefix="/tasks",tags=["Tasks"],dependencies=[Depends(verify_bearer_token)])
+task_router = APIRouter(prefix="/tasks",tags=["Tasks"],dependencies=[Depends(verify_jwt_token)])
 # guard = Annotated[dict,Depends(verify_bearer_token)]
 
 
