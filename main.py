@@ -12,8 +12,7 @@ from src.auth.auth_controller import auth_router
 dotenv.load_dotenv()
 
 app = FastAPI(title="FastAPI + MongoDB",version="0.0.1")
-app.include_router(task_router)
-app.include_router(auth_router)
+
 
 class Response(BaseModel):
     data:str
@@ -22,6 +21,9 @@ class Response(BaseModel):
 def root():
     print(f'-- DB Name : {database}')
     return Response(data="API is running")
+
+app.include_router(auth_router)
+app.include_router(task_router)
 
 
 
